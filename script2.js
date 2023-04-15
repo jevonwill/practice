@@ -34,6 +34,7 @@ function renderBook(){
   card.appendChild(title);
   card.appendChild(author);
   card.appendChild(removeButton);
+  card.setAttribute("data-index-number", library.indexOf(book));
   booksList.appendChild(card);
 });
 
