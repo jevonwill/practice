@@ -10,11 +10,12 @@ let library = [
 
 ];
 
-
+const button = document.querySelector('.button');
+button.addEventListener("click", newBook);
 
 const booksList = document.getElementById('books-list');
 
-// Loop through the books array and create an <li> element for each book
+// Loop through the books array and create a card element for each book
 library.forEach(function(book) {
   const card = document.createElement('div');
   card.classList.add('card');
@@ -27,3 +28,13 @@ library.forEach(function(book) {
   card.appendChild(author);
   booksList.appendChild(card);
 });
+
+
+function Book(title, author){
+    this.title = title;
+    this.author = author;
+}
+
+function addBooktoLibrary(){
+
+}
