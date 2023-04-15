@@ -1,5 +1,6 @@
 # practice
 
-1: Loop through array of book objects
-2: Create a book card for each book (i < books.length)
-3: For each card, change innerHTML using placeholder i.e ${books[i][title]}
+1: Create and display form
+2: Store values from form submit.
+3: Use values from form submit to create a new Book()
+4: Add the new Book to the Library array

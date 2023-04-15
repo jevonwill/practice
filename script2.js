@@ -28,22 +28,32 @@ function renderBook(){
   title.textContent = book.title;
   const author = document.createElement('p');
   author.textContent = `by ${book.author}`;
+  const removeButton = document.createElement('button');
+  removeButton.textContent = "Remove";
 
   card.appendChild(title);
   card.appendChild(author);
+  card.appendChild(removeButton);
   booksList.appendChild(card);
 });
 
 };
 
+function Book(title, author){
+  this.title = title;
+  this.author = author;
+  this.read = false;
+}
+
+
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const titleData = titleInput.value.trim();
-    const authorData = authorInput.value.trim();
+    const newBook = new Book(titleInput.value.trim(), authorInput.value.trim());
 
-    if(titleData && authorData) {
-        library.push({title: titleData, author: authorData});
+
+    if(newBook.title && newBook.author) {
+        library.push({title: titleInput.value.trim(), author: authorInput.value.trim()});
         
         titleInput.value = '';
         authorInput.value = '';

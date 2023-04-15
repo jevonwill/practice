@@ -1,3 +1,33 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 180px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+  }
+
+.button {
+    margin-top: 20px;
+    width: 100px;
+}
 .pageHeader {
     text-align: center;
 }
@@ -29,4 +59,9 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  
+ 
+  .card button {
+    width: fit-content;
+    border: 1px solid;
+    margin-top: 8px;
+  }
