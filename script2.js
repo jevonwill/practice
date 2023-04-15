@@ -1,12 +1,12 @@
 let library = [
-  { title: 'Art of War', author: 'Sun Tzu'},
-  { title: 'Cask of Amontillado', author: 'Edgar Allen Poe'},
-  { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
-  { title: 'To Kill a Mockingbird', author: 'Harper Lee' },
-  { title: '1984', author: 'George Orwell' },
-  { title: 'The Catcher in the Rye', author: 'J.D. Salinger' },
-  { title: 'Brave New World', author: 'Aldous Huxley' },
-  { title: 'The Bible', author: 'God' }
+  { title: 'Art of War', author: 'Sun Tzu', read: false},
+  { title: 'Cask of Amontillado', author: 'Edgar Allen Poe', read: false},
+  { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', read: false},
+  { title: 'To Kill a Mockingbird', author: 'Harper Lee', read: false },
+  { title: '1984', author: 'George Orwell', read: false },
+  { title: 'The Catcher in the Rye', author: 'J.D. Salinger', read: false },
+  { title: 'Brave New World', author: 'Aldous Huxley', read: false },
+  { title: 'The Bible', author: 'God', read: false }
 
 ];
 
@@ -28,12 +28,16 @@ function renderBook(){
   title.textContent = book.title;
   const author = document.createElement('p');
   author.textContent = `by ${book.author}`;
+
   const removeButton = document.createElement('button');
   removeButton.textContent = "Remove";
+  const readButton = document.createElement('button');
+  readButton.textContent = "Mark Read"
 
   card.appendChild(title);
   card.appendChild(author);
   card.appendChild(removeButton);
+  card.appendChild(readButton);
   card.setAttribute("data-index-number", library.indexOf(book));
   
   booksList.appendChild(card);
