@@ -35,8 +35,14 @@ function renderBook(){
   card.appendChild(author);
   card.appendChild(removeButton);
   card.setAttribute("data-index-number", library.indexOf(book));
+  
   booksList.appendChild(card);
-});
+
+  removeButton.addEventListener('click', function() {
+      library.splice(card.dataset.indexNumber, 1);
+      renderBook();
+    });
+  });
 
 };
 
