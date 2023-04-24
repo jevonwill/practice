@@ -63,5 +63,6 @@ form {
   .card button {
     width: fit-content;
     border: 1px solid;
-    margin-top: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }

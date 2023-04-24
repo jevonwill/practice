@@ -14,6 +14,15 @@ const form = document.getElementById('add-book-form');
 const titleInput = document.getElementById('title');
 const authorInput = document.getElementById('author');
 
+function Book(title, author){
+  this.title = title;
+  this.author = author;
+  this.read = false;
+}
+
+Book.prototype.readBook = function() {
+  this.read = true;
+}
 
 // Loop through the books array and create a card element for each book
 function renderBook(){
@@ -28,6 +37,9 @@ function renderBook(){
   title.textContent = book.title;
   const author = document.createElement('p');
   author.textContent = `by ${book.author}`;
+  
+  const readStatus = document.createElement('p');
+  readStatus.textContent = `Have you read this book: ` + book.read;
 
   const removeButton = document.createElement('button');
   removeButton.textContent = "Remove";
@@ -38,6 +50,7 @@ function renderBook(){
   card.appendChild(author);
   card.appendChild(removeButton);
   card.appendChild(readButton);
+  card.appendChild(readStatus);
   card.setAttribute("data-index-number", library.indexOf(book));
   
   booksList.appendChild(card);
@@ -46,15 +59,18 @@ function renderBook(){
       library.splice(card.dataset.indexNumber, 1);
       renderBook();
     });
+
+  readButton.addEventListener('click', function(){
+    library[book].readBook();
+    renderBook();
+
+  });
+
   });
 
 };
 
-function Book(title, author){
-  this.title = title;
-  this.author = author;
-  this.read = false;
-}
+
 
 
 form.addEventListener('submit', function(e) {
@@ -64,7 +80,7 @@ form.addEventListener('submit', function(e) {
 
 
     if(newBook.title && newBook.author) {
-        library.push({title: titleInput.value.trim(), author: authorInput.value.trim()});
+        library.push({title: titleInput.value.trim(), author: authorInput.value.trim(), read: false});
         
         titleInput.value = '';
         authorInput.value = '';
