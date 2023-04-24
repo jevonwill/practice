@@ -61,7 +61,7 @@ function renderBook(){
     });
 
   readButton.addEventListener('click', function(){
-    library[book].readBook();
+    book.read = !book.read; 
     renderBook();
 
   });
