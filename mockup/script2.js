@@ -14,15 +14,13 @@ const form = document.getElementById('add-book-form');
 const titleInput = document.getElementById('title');
 const authorInput = document.getElementById('author');
 
-function Book(title, author){
+function Book(title, author, read){
   this.title = title;
   this.author = author;
-  this.read = false;
+  this.read = read;
 }
 
-Book.prototype.readBook = function() {
-  this.read = true;
-}
+
 
 // Loop through the books array and create a card element for each book
 function renderBook(){
