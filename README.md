@@ -2,7 +2,7 @@
 
 ###Prereqs:
 
-Do research on design methodologies, initials thoughts are CRUD.  What is MVP? - Done
+Do research on design methodologies, initials thoughts are CRUD.  What is MVP? - 
 For longterm mantainability, would be wise to move to NextJS and basic TailwindCSS stylings
 
 

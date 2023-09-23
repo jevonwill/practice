@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+}
+
+.left-side {
+    width: 40%;
+    height: 900px;
+    background-image: url("pic1.png");
+}
+
+.right-side {
+    width: 60%;
+    height: 900px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
