@@ -1,4 +1,6 @@
 # practice
+open -a Safari test2.html
+
 
 ###Prereqs:
 
