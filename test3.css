@@ -1,0 +1,16 @@
+.container {
+    display: inline-grid;
+    grid-template: 100px 100px 100px 100px 100px / 100px 100px 100px 100px 100px;
+    background-color: lightblue; 
+  }
+  
+  .room {
+    border: 1px solid;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #living-room {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
